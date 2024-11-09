@@ -142,28 +142,33 @@
 // Mejora el servidor del ejercicio anterior para manejar dos rutas adicionales: /hora, que responda con la hora actual, y /saludo, que devuelva un saludo
 
 
-const http = require('http');
-const url = require('url')
+// const http = require('http');
+// const url = require('url')
 
-const server = http.createServer((req, res) => {
-    const parsedUrl  = url.parse(req.url, true)
-if (req.url === '/'){
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Bienvenidos a mi servidor en Node.js');
-} else if (parsedUrl.pathname === '/hora') {  //podria haber sido (req.url === '/hora' && req.method === 'GET')
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end(`Hora actual: ${new Date().toLocaleTimeString()}`)
- } else if (parsedUrl.pathname === '/saludo') {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end(`Hola a todos`)
- }
- else{
-    res.writeHead(404, { 'Content-Type': 'text/plain' });
-    res.end('error ');
+// const server = http.createServer((req, res) => {
+//     const parsedUrl  = url.parse(req.url, true)
+// if (req.url === '/'){
+//     res.writeHead(200, { 'Content-Type': 'text/plain' });
+//     res.end('Bienvenidos a mi servidor en Node.js');
+// } else if (parsedUrl.pathname === '/hora') {  //podria haber sido (req.url === '/hora' && req.method === 'GET')
+//     res.writeHead(200, { 'Content-Type': 'text/plain' });
+//     res.end(`Hora actual: ${new Date().toLocaleTimeString()}`)
+//  } else if (parsedUrl.pathname === '/saludo') {
+//     res.writeHead(200, { 'Content-Type': 'text/plain' });
+//     res.end(`Hola a todos`)
+//  }
+//  else{
+//     res.writeHead(404, { 'Content-Type': 'text/plain' });
+//     res.end('error ');
 
- }
-});
+//  }
+// });
 
-server.listen(3001, () => {
-    console.log('Servidor escuchando en http://localhost:3001');
-});
+// server.listen(3001, () => {
+//     console.log('Servidor escuchando en http://localhost:3001');
+// });
+
+//----------------------------------------------------------------------------
+//ver archivo estatico.js
+
+
