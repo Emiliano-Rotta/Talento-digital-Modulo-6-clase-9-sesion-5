@@ -8,9 +8,9 @@ const PORT = 3000;
 
 //para trabajar con archivos estaticos necesitamos esto
 app.use(express.static('public'));
-app.get('/', (req, res) => {
-    res.send('Bienvenidos a mi servidor con archivos estáticos');
-});
+// app.get('/', (req, res) => {
+//     res.send('Bienvenidos a mi servidor con archivos estáticos');
+// });
 
 app.listen(PORT, () => {
     console.log(`Servidor escuchando en http://localhost:${PORT}`);
